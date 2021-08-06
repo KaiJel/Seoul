@@ -1,0 +1,256 @@
+$font-color-black: #444;
+$font-color-black-h:  #3b5860;
+$color-dipgreen: #3b5860;
+$background-color-g: #2095a6;
+$background-color-b: #1a68a2;
+$color-fin: #f3fdfa;
+$color-fin-hover: #edfbf7;
+$color-mint: #00af9d;
+$color-white: #fff;
+$color-gray: #666;
+$btn-gray: #878787;
+$color-h-gray: #efefef;
+$color-lightgray: #a9a9a9;
+$border-gray: 1px solid #e0e0e0;
+$btn-border-radius: 4px;
+
+
+@mixin flex-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin after ($w:null, $h:null, $bg:null, $l:null, $t:null, $r: null, $b: null) {
+    display: block;
+    content: '';
+    width: $w; height: $h;
+    background-color: $bg;
+    position: absolute;
+    left: $l; top: $t; right: $r; bottom: $b;
+}
+
+.inner { max-width: 1300px; }
+.sub__header {
+    margin-top: 110px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $color-white;
+    border-bottom: $border-gray;
+    padding: 0 40px;
+    .sub-list { 
+        height: 30px;
+        margin: 0 15px;
+        display: grid;
+        grid-template-columns: 50px 230px 230px;
+        align-items: center;
+        .home { width: 50%;}
+        &>li {
+            position: relative;
+            color: $color-lightgray;
+            font-size: 18px;
+            a { display: inherit;}
+            &:not(:last-child) { &::after { @include after(1px,25px,$color-lightgray,$t:0,$r:0)} }
+            &.menu-open {
+                padding: 0 30px;
+                cursor: pointer;
+                .more { 
+                    width: 50%;
+                    &.on { transform: rotate(180deg);} }
+                span { 
+                    text-align: right;
+                    display: inline-block;
+                    &:nth-child(2) { 
+                        float: right;
+                        transform: translateY(6px);
+                    }}
+            }
+        }
+    }
+    &__menu {
+        display: none;
+        width: 100%;
+        background-color: $color-white;
+        color: $font-color-black;
+        font-size: 16px;
+        position: absolute;
+        left: 0;
+        top: 44px;
+        border : $border-gray;
+        box-shadow: 1px 7px 15px rgba(3, 2, 2, 0.12);
+        li {
+            padding: 0 30px;
+            line-height: 56px;
+            &:not(:first-child) { border-top: $border-gray;}
+            &:hover { background-color: $color-h-gray; }
+        }
+    }
+}
+
+.title {
+    height: 320px;
+    color: $color-dipgreen;
+    @include flex-c();
+    font: { size: 42px; weight: 900;}
+    h2 {
+        position: relative;
+        &::after { 
+            @include after(20px,20px,$color-mint,$t:0,$r:-30px); 
+            border-radius: 50%;
+        }
+    }
+}
+
+.content-search {
+    display: grid;
+    grid-template-columns: 130px 300px 48px;
+    justify-content: flex-end;
+    gap: 5px;
+    select, input { 
+        line-height: 43px;
+        border: $border-gray; 
+        border-radius: $btn-border-radius;
+        font-size: 18px;
+     }
+    select { 
+        margin-right: 5px;
+        padding: 5px 10px 0;
+        background: url("../imgs/ico_select_arr.png")90px no-repeat;
+        appearance: none;
+    }
+    input { padding: 5px 20px 0;}
+    div { 
+        background-color: $color-mint;
+        border-radius: $btn-border-radius;
+        position: relative;
+        @include flex-c();
+        img { width: 50%;}
+        &::after {
+            @include after(100%,100%,rgba(0,0,0,0.1),0,0);
+            opacity: 0;
+            transition: 0.3s;
+        }
+        &:hover { &::after { opacity: 1; }}
+    }
+
+}
+
+.list {
+    border-top: 2px solid $font-color-black;
+    margin: 25px 0;
+    li { 
+        line-height: 63px;
+        text-align: center;
+        border-bottom: $border-gray;
+        display: grid;
+        grid-template-columns:  100px 750px 70px 200px 100px;
+        align-items: center;
+    }
+    &__header { font: { size: 18px; weight: 700; } }
+    &__fix { 
+        background-color: $color-fin;
+        font-weight: 400;
+        span { 
+            &:nth-child(1) { 
+                display: inline-block;
+                line-height: 30px;
+                background: $color-mint;
+                border-radius: $btn-border-radius;
+                width: 50px;
+                color: #fff;
+                margin-left: 25px;
+            }
+            &:nth-child(2) { text-align: left; padding-left: 5px;}
+        }
+        &:hover { background-color: $color-fin-hover;}
+    }
+    &__normal {
+        font-weight: 400;
+        &:hover { background-color: $color-h-gray; }
+        span { 
+            &:nth-child(2) { text-align: left; padding-left: 15px;}
+            &:nth-child(3) { line-height: 20px;}
+        }
+    }
+}
+
+.writing {
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    a { 
+        float: right;
+        display: inline-block;
+        width: 100px;
+        height: 42px;
+        background-color: $btn-gray;
+        color: $color-white;
+        border-radius: $btn-border-radius;
+        @include flex-c();
+    }
+}
+
+.list__nav {
+    @include flex-c();
+    margin: 40px 0 100px;
+    .prev-btn , .next-btn { 
+        display: flex;
+        div { 
+            width: 43px;
+            height: 43px;
+            border: $border-gray;
+            border-radius: $btn-border-radius;
+            overflow: hidden;
+        }
+    }
+    .prev-btn {
+        div {
+            &:first-child {
+                margin-right: 10px;
+                img { transform: translate(5px, 5px);}
+            }
+            &:last-child { img { transform: translate(-25px, 5px); }}
+        }
+    }
+    .next-btn {
+        div {
+            &:first-child {
+                margin-right: 10px;
+                img { transform: translate(-53px, 6px);}
+            }
+            &:last-child { img { transform: translate(-83px, 6px); }}
+        }
+    }
+    ul {
+        border: $border-gray;
+        border-radius: $btn-border-radius;
+        margin: 0 20px;
+        li {
+            text-align: center;
+            width: 43px;
+            line-height: 43px;
+            &:not(:last-child) { border: $border-gray;}
+           
+        }
+    }
+}
+
+
+
+
+//-----반응형
+
+@media all and (max-width: 1599px) {
+}
+@media all and (max-width: 1366px) {
+}
+
+@media all and (max-width: 1025px) {
+}
+
+@media all and (max-width: 767px) {
+}

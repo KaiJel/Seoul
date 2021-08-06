@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/notice.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/notice.js"></script>
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <h1><img src="imgs/n_logo.png" alt="로고"></h1>
+            <div class="none"></div>
+            <ul class="nav">
+                <li>센터소개
+                    <ul class="sub-nav">
+                        <li><a href="#">비전과 목표</a></li>
+                        <li><a href="#">인사말</a></li>
+                        <li><a href="#">조직도</a></li>
+                        <li><a href="#">오시는길</a></li>
+                    </ul>
+                </li>
+                <li>교육지원단
+                    <ul class="sub-nav">
+                        <li><a href="#">교육 지원단 신설</a></li>
+                        <li><a href="#">교육 지원단 관리</a></li>
+                        <li><a href="#">교육 지원단 가입</a></li>
+                        <li><a href="#">퇴직교직원 등록</a></li>
+                    </ul>
+                </li>
+                <li>활동실적
+                    <ul class="sub-nav">
+                        <li><a href="#">활동실적 등록</a></li>
+                        <li><a href="#">활동실적 관리</a></li>
+                        <li><a href="#">실적확인서 관리</a></li>
+                    </ul>
+                </li>
+                <li>알림마당
+                    <ul class="sub-nav">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">센터 연수 행사</a></li>
+                        <li><a href="#">QnA</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">활동후기</a></li>
+                        <li><a href="#">자유게시판</a></li>
+                    </ul>
+                </li>
+                <li>자료실
+                    <ul class="sub-nav">
+                        <li><a href="#">소식지</a></li>
+                        <li><a href="#">웹진</a></li>
+                        <li><a href="#">회원자료실</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="logbox">
+                <li>발급번호확인</li>
+                <li>회원가입</li>
+                <li>로그인</li>
+            </ul>
+            <div class="sitemap-btn"><img src="imgs/ico_all_menu.png" alt="사이트맵"></div>
+            <div class="sitemap">
+                <div class="sitemap-close"><img src="imgs/ico_all_menu_close.png" alt="닫기"></div>
+                <div class="sitemap-bg">
+                    <ul class="sitemap-list"><div><span>전체메뉴</span></div>
+                        <li><span>센터소개</span><span><img src="imgs/ico_loca_arr.png" alt="이미지"></span>
+                            <ul class="slide-toggle">
+                                <li><a href="#">비전과 목표</a></li>
+                                <li><a href="#">인사말</a></li>
+                                <li><a href="#">조직도</a></li>
+                                <li><a href="#">오시는길</a></li>
+                            </ul>
+                        </li>
+                        <li><span>교육지원단</span><span><img src="imgs/ico_loca_arr.png" alt="이미지"></span>
+                            <ul class="slide-toggle">
+                                <li><a href="#">교육 지원단 신설</a></li>
+                                <li><a href="#">교육 지원단 관리</a></li>
+                                <li><a href="#">교육 지원단 가입</a></li>
+                                <li><a href="#">퇴직교직원 등록</a></li>
+                            </ul>
+                        </li>
+                        <li><span>활동실적</span><span><img src="imgs/ico_loca_arr.png" alt="이미지"></span>
+                            <ul class="slide-toggle">
+                                <li><a href="#">활동실적 등록</a></li>
+                                <li><a href="#">활동실적 관리</a></li>
+                                <li><a href="#">실적확인서 관리</a></li>
+                            </ul>
+                        </li>
+                        <li><span>알림마당</span><span><img src="imgs/ico_loca_arr.png" alt="이미지"></span>
+                            <ul class="slide-toggle">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">센터 연수 행사</a></li>
+                                <li><a href="#">QnA</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">활동후기</a></li>
+                                <li><a href="#">자유게시판</a></li>
+                            </ul>
+                        </li>
+                        <li><span>자료실</span><span><img src="imgs/ico_loca_arr.png" alt="이미지"></span>
+                            <ul class="slide-toggle">
+                                <li><a href="#">소식지</a></li>
+                                <li><a href="#">웹진</a></li>
+                                <li><a href="#">회원자료실</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="logbox">
+                        <li>발급번호확인</li>
+                        <li>회원가입</li>
+                        <li>로그인</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sub-bg"></div>
+    </header>
+    <div class="sub__header">
+        <ul class="sub-list">
+            <li><a href="#"><img src="imgs/ico_loca_home.png" alt="홈" class="home"></a></li>
+            <li class="menu-open">
+                <span>알림마당</span>
+                <span><img src="imgs/ico_loca_arr.png" alt="더보기" class="more"></span>
+                <ul class="sub__header__menu">
+                    <li>센터소개</li>
+                    <li>교육지원단</li>
+                    <li>활동실적</li>
+                    <li>알림마당</li>
+                    <li>자료실</li>
+                </ul>
+            </li>
+            <li class="menu-open">
+                <span>공지사항</span>
+                <span><img src="imgs/ico_loca_arr.png" alt="더보기" class="more"></span>
+                <ul class="sub__header__menu">
+                    <li>공지사항</li>
+                    <li>센터연수 행사</li>
+                    <li>QnA</li>
+                    <li>FAQ</li>
+                    <li>활동후기</li>
+                    <li>자유게시판</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <main>
+        <div class="inner">
+            <div class="title">
+                <h2>공지사항</h2>
+            </div>
+            <div class="content-search">
+                <select name="option" id="">전체
+                    <option value="all">전체</option>
+                    <option value="title">제목</option>
+                    <option value="content">내용</option>
+                </select>
+                <input type="text" placeholder="검색어를 입력하세요.">
+                <div><img src="imgs/ico_form_sch.png" alt="검색"></div>
+            </div>
+            <ul class="list">
+                <li class="list__header">
+                    <span>번호</span>
+                    <span>제목</span>
+                    <span>첨부</span>
+                    <span>작성자</span>
+                    <span>조회수</span>
+                </li>
+                <li class="list__fix">
+                    <span>공지</span>
+                    <span><a href="#">가입조건 안내 및 ID카드 발급안내</a></span>
+                    <span></span>
+                    <span>관리자(기획운영)</span>
+                    <span>814</span>
+                </li>
+                <li class="list__normal">
+                    <span>no</span>
+                    <span><a href="#">남부돌봄교실 영문초등학교 봉사자 모집 안내</a></span>
+                    <span><img src="imgs/ico_file_pc.png" alt="첨부파일"></span>
+                    <span>서울시교육청</span>
+                    <span>14</span>
+                </li>
+            </ul>
+            <div class="writing">
+                <a href="#"><span>글쓰기</span></a>
+            </div>
+            <div class="list__nav">
+                <div class="prev-btn">
+                    <div class="prev-start"><img src="imgs/ico_pager_pc.png" alt="맨 앞으로"></div>
+                    <div class="prev"><img src="imgs/ico_pager_pc.png" alt="앞으로"></div>
+                </div>
+                <ul>
+                    <li>1</li>
+                </ul>
+                <div class="next-btn">
+                    <div class="next-end"><img src="imgs/ico_pager_pc.png" alt="다음으로"></div>
+                    <div class="next"><img src="imgs/ico_pager_pc.png" alt="맨 뒤로"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">이용약관</a></li>
+        </ul>
+        <address>
+            <div>서울특별시 동대문구 천호대로 4길 19-3 교육인생이모작지원센터 1관 4F</div>
+            <div>전화 : 02-2230-8574, 팩스 : 02-2230-8558</div>
+        </address>
+        <p>© 2021. Seoul Metropolitan Office of Education. All rights reserved.</p>
+        <div><img src="imgs/f_logo.png" alt="로고"></div>
+    </footer>
+</body>
+</html>
