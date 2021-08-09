@@ -505,8 +505,8 @@
   .list li {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (5% 17% auto)[3];
-        grid-template-columns: repeat(3, 5% 17% auto);
+    -ms-grid-columns: (7% 25% auto)[3];
+        grid-template-columns: repeat(3, 7% 25% auto);
     line-height: 74px;
     padding: 10px 0;
     text-align: left;

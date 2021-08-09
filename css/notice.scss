@@ -321,7 +321,7 @@ $btn-border-radius: 4px;
         li {
             &:first-child { display: none;}
             display: grid;
-            grid-template-columns: repeat(3, 5% 17% auto);
+            grid-template-columns: repeat(3, 7% 25% auto);
             line-height: 74px;
             padding: 10px 0;
             text-align: left;
