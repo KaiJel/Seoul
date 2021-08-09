@@ -17,7 +17,7 @@ $(function(){
     }
     function displayNoticData(noticList){
         const list = document.querySelector('.list');
-        list.innerHTML = noticList.map(noticList => createHTMLNoticData(noticList)).join('');
+        list.innerHTML += noticList.map(noticList => createHTMLNoticData(noticList)).join('');
     }
     function createHTMLNoticData(noticList){
         return`
@@ -55,7 +55,7 @@ $(function(){
             <li class="list__normal">
                 <span>${i}</span>
                 <span><a href="#">${normalList.title}</a></span>
-                <span>${normalList.attachment}</span>
+                <span class="attachment">${normalList.attachment}</span>
                 <span>${normalList.writer}</span>
                 <span>${normalList.view}</span>
             </li>
@@ -73,8 +73,9 @@ $(function(){
 
 //만약 span안의 문자가 file이라면 <img src="imgs/ico_file_pc.png" alt="첨부파일"> 로 대체해주기
     function reverse(){
-        let chText = document.querySelectorAll('.list__fix span')[2];
-        console.log(chText);
+        let chText = document.querySelectorAll('attachment');
+        let giveText = chText.innerHTML;
+        console.log(givText);
         if(chText.indexOf('file') > -1) { // 이 때 data 변수안에 문자가 존재하면 값은 0이다.
         chText.innerText = '<img src="imgs/ico_file_pc.png" alt="첨부파일">';
         }
