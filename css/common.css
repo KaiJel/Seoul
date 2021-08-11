@@ -503,6 +503,7 @@ footer p {
     display: block;
   }
   header .sitemap-bg .sitemap-list > li {
+    cursor: pointer;
     width: 100%;
     line-height: 55px;
     padding: 0;

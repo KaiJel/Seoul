@@ -289,10 +289,8 @@ footer {
 }
 
 @media all and (max-width: 1025px) {
-
     header {
         .inner { grid-template-columns: 200px auto auto 450px 40px; }
-
         .sitemap {
             padding-left: 40px;
             text-align: left;
@@ -323,6 +321,7 @@ footer {
                     }
                     span, img { display: block;}
                     &>li { 
+                        cursor: pointer;
                         width: 100%;
                         line-height: 55px;
                         padding: 0;
